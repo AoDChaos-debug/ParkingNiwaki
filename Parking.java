@@ -105,7 +105,7 @@ public class ParkingLotManagementSystem {
         CurrentParked.put(plateNo, record);
         AllRecords.add(record);
 
-        System.out.println(plateNo + " (" + vehicle + ") parked in slot " + slot + ".");
+        System.out.println(PlateNo + " (" + vehicle + ") parked in slot " + slot + ".");
     }
 
     
@@ -129,7 +129,7 @@ public class ParkingLotManagementSystem {
         record.updateOnExit(timeOut, hours, fee);
         CurrentParked.remove(plateNo);
 
-        System.out.println(plateNo + " left. Hours: " + String.format("%.2f", hours) + ", Fee: $" + fee + ".");
+        System.out.println(PlateNo + " left. Hours: " + String.format("%.2f", hours) + ", Fee: $" + fee + ".");
     }
 
     
@@ -157,7 +157,7 @@ public class ParkingLotManagementSystem {
             for (ParkingRecord record : AllRecords) {
                 writer.write(record.toFileString() + "\n");
             }
-            System.out.println("Records saved to parking_records.txt successfully!");
+            System.out.println("Records saved to parking_records.txt successfully.");
         } catch (IOException e) {
             System.out.println("Error saving to file: " + e.getMessage());
         }
