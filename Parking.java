@@ -105,7 +105,7 @@ public class ParkingLotManagementSystem {
         CurrentParked.put(plateNo, record);
         AllRecords.add(record);
 
-        System.out.println(PlateNo + " (" + vehicle + ") parked in slot " + slot + ".");
+        System.out.println(plateNo + " (" + vehicle + ") parked in slot " + slot + ".");
     }
 
     
@@ -129,7 +129,7 @@ public class ParkingLotManagementSystem {
         record.updateOnExit(timeOut, hours, fee);
         CurrentParked.remove(plateNo);
 
-        System.out.println(PlateNo + " left. Hours: " + String.format("%.2f", hours) + ", Fee: $" + fee + ".");
+        System.out.println(plateNo + " left. Hours: " + String.format("%.2f", hours) + ", Fee: $" + fee + ".");
     }
 
     
